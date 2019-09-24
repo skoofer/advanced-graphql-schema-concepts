@@ -1,0 +1,35 @@
+{
+  "name": "advanced-graphql-schema-concepts",
+  "version": "1.0.0",
+  "description": "Advanced GraphQL Schema Concepts",
+  "main": "index.js",
+  "scripts": {
+    "schema-fundamentals": "nodemon ./1-schema-fundamentals/index.js",
+    "schema-stitching-merging": "nodemon ./2-schema-stitching-merging/index.js",
+    "schema-delegation": "nodemon ./3-schema-delegation/index.js",
+    "schema-introspection": "nodemon ./4-schema-introspection/index.js",
+    "remote-schema": "nodemon ./5-remote-schema/index.js",
+    "schema-transforms": "nodemon ./6-schema-transforms/index.js",
+    "schema-stitching-delegation": "nodemon ./7-schema-stitching-delegation/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skoofer/advanced-graphql-schema-concepts.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skoofer/advanced-graphql-schema-concepts/issues"
+  },
+  "homepage": "https://github.com/skoofer/advanced-graphql-schema-concepts#readme",
+  "dependencies": {
+    "apollo-link-http": "^1.5.16",
+    "apollo-server": "^2.9.3",
+    "graphql": "^14.5.7",
+    "graphql-tools": "^4.0.5",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
