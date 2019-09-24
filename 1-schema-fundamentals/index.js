@@ -53,7 +53,10 @@ const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
   // logger: { log: e => console.log(`Here is an error for you: ${e.originalMessage}`) },
-  // resolverValidationOptions: { requireResolversForArgs: true }
+  // resolverValidationOptions: {
+  //   requireResolversForArgs: true,
+  //   allowResolversNotInSchema: false
+  // }
 })
 
 const server = new ApolloServer({ schema });
