@@ -34,7 +34,7 @@ const typeDefs = `
     office: Office
   }
 
-  # sharing the boundary type
+  # sub schema
   type Office {
     id: ID
     name: String

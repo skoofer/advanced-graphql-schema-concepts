@@ -3,7 +3,10 @@ const { mergeSchemas } = require('graphql-tools');
 const employeeSchema = require('./employee');
 const officeSchema = require('./office');
 
-const schema = mergeSchemas({ schemas: [employeeSchema, officeSchema] });
+const schema = mergeSchemas({
+    schemas: [employeeSchema, officeSchema],
+    // onTypeConflict: (left, right) => right
+});
 
 const server = new ApolloServer({ schema });
 

@@ -9,7 +9,7 @@ const start = async () => {
     const countrySchema = await getCountrySchema();
 
 
-    const extensionTypeDefs = `
+    const linkTypeDefs = `
     extend type Employee {
         country: Country
         office: Office
@@ -20,7 +20,7 @@ const start = async () => {
     }
     `;
 
-    const extensionResolvers = {
+    const linkResolvers = {
         Employee: {
             country: {
                 fragment: `... on Employee { countryCode }`,
@@ -75,8 +75,8 @@ const start = async () => {
     const schema = mergeSchemas(
         {
 
-            schemas: [employeeSchema, officeSchema, countrySchema, extensionTypeDefs],
-            resolvers: [extensionResolvers]
+            schemas: [employeeSchema, officeSchema, countrySchema, linkTypeDefs],
+            resolvers: [linkResolvers]
         }
     );
 
