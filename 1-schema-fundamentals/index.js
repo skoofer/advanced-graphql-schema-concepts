@@ -33,19 +33,15 @@ const typeDefs = `
   type Query {
     employee(id: ID): Employee
     employees: [Employee]
-    hello: String
-  }
-
-  type Mutation {
-    saveEmployee(id: ID! name: String!): Boolean
+    hello(name: String): String
   }
 `;
 
 const resolvers = {
   Query: {
+    hello: () => { throw new Error('I do not know how to greet') },
     employee: (_, args) => employees.find(employee => employee.id == args.id),
     employees: () => employees,
-    hello: () => { throw new Error('I do not know how to greet') }
   }
 };
 
