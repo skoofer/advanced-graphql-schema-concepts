@@ -19,7 +19,6 @@ const offices = [
 ];
 
 const typeDefs = `
-  # parent schema
   type Office {
     id: ID
     name: String

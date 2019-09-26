@@ -5,7 +5,7 @@ const officeSchema = require('./office');
 
 const schema = mergeSchemas({
     schemas: [employeeSchema, officeSchema],
-    // onTypeConflict: (left, right) => right
+    onTypeConflict: (left, right) => right
 });
 
 const server = new ApolloServer({ schema });

@@ -34,7 +34,6 @@ const typeDefs = `
     office: Office
   }
 
-  # sub schema
   type Office {
     id: ID
     name: String

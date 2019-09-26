@@ -33,7 +33,7 @@ const typeDefs = `
   type Query {
     employee(id: ID): Employee
     employees: [Employee]
-    # hello: String
+    hello: String
   }
 
   type Mutation {
@@ -45,18 +45,18 @@ const resolvers = {
   Query: {
     employee: (_, args) => employees.find(employee => employee.id == args.id),
     employees: () => employees,
-    // hello: () => { throw new Error('I do not know how to greet') }
+    hello: () => { throw new Error('I do not know how to greet') }
   }
 };
 
 const schema = makeExecutableSchema({
   typeDefs,
   resolvers,
-  // logger: { log: e => console.log(`Here is an error for you: ${e.originalMessage}`) },
-  // resolverValidationOptions: {
-  //   requireResolversForArgs: true,
-  //   allowResolversNotInSchema: false
-  // }
+  logger: { log: e => console.log(`Here is an error for you: ${e.originalMessage}`) },
+  resolverValidationOptions: {
+    requireResolversForArgs: true,
+    allowResolversNotInSchema: false
+  }
 })
 
 const server = new ApolloServer({ schema });
